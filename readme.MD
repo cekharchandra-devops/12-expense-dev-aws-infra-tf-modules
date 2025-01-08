@@ -120,6 +120,3 @@ resource "aws_route53_record" "public_record" {
 - AWS CLI installed and configured.
 - Terraform installed on your system.
 - Ansible installed for configuration management.
-
-## License
-This setup is licensed under the MIT License.
