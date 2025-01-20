@@ -1,5 +1,5 @@
 module "mysql_sg" {
-  source       = "git::https://github.com/cekharchandra-devops/09-tf-aws-vpc-module.git?ref=main"
+  source       = "git::https://github.com/cekharchandra-devops/11-tf-aws-security-group-module.git?ref=main"
   project_name = var.project_name
   vpc_id       = local.vpc_id
   environmet   = var.environmet
@@ -9,7 +9,7 @@ module "mysql_sg" {
 }
 
 module "backend_sg" {
-  source       = "git::https://github.com/cekharchandra-devops/09-tf-aws-vpc-module.git?ref=main"
+  source       = "git::https://github.com/cekharchandra-devops/11-tf-aws-security-group-module.git?ref=main"
   sg_name      = "backend"
   project_name = var.project_name
   environmet   = var.environmet
@@ -19,7 +19,7 @@ module "backend_sg" {
 }
 
 module "frontend_sg" {
-  source       = "git::https://github.com/cekharchandra-devops/09-tf-aws-vpc-module.git?ref=main"
+  source       = "git::https://github.com/cekharchandra-devops/11-tf-aws-security-group-module.git?ref=main"
   vpc_id       = local.vpc_id
   project_name = var.project_name
   environmet   = var.environmet
@@ -29,7 +29,7 @@ module "frontend_sg" {
 }
 
 module "bastion_sg" {
-  source       = "git::https://github.com/cekharchandra-devops/09-tf-aws-vpc-module.git?ref=main"
+  source       = "git::https://github.com/cekharchandra-devops/11-tf-aws-security-group-module.git?ref=main"
   vpc_id       = local.vpc_id
   project_name = var.project_name
   environmet   = var.environmet
@@ -39,7 +39,7 @@ module "bastion_sg" {
 }
 
 module "ansible_sg" {
-  source       = "git::https://github.com/cekharchandra-devops/09-tf-aws-vpc-module.git?ref=main"
+  source       = "git::https://github.com/cekharchandra-devops/11-tf-aws-security-group-module.git?ref=main"
   vpc_id       = local.vpc_id
   project_name = var.project_name
   environmet   = var.environmet
